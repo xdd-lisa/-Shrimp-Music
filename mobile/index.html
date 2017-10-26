@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/index.css">
+  <style>
+    /*解决闪烁问题，闪烁的原理就是一开始display：none，执行到angular时再显示，但是因为在执行此处代码时事件比较早，display：none，都没有起到作用，所以手动设置一开始就是隐藏*/
+    [ng-cloak]{
+      display:none;
+    }
+    
+    .header ul{
+      overflow: hidden;
+    }
+    .header ul li{
+      width: 1000px;
+    }
+  </style>
+</head>
+<body>
+  <div ng-app="app">
+    <div class="header" ng-controller="navsController">
+      <ul>
+        <li ng-cloak>
+          <a href="#/category/{{item.categoryId}}" ng-repeat="item in categoryList.rows">{{item.categoryName}}</a>
+        </li>
+      </ul>
+    </div>
+    <div ng-view>
+  
+    </div>
+    
+    <div id="musicPlay">
+      <audio id="musicId" controls></audio>
+    </div>
+    
+  </div>
+</body>
+</html>
+<script src="libs/angular/angular.min.js"></script>
+<script src="libs/angular/angular-route.js"></script>
+<!--<script src="libs/angular/angular-touch.min.js"></script>-->
+<script src="js/index.js"></script>
+<script src="js/musicList.js"></script>

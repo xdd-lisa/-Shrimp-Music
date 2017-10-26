@@ -1,0 +1,10 @@
+
+<ul>
+  <li class="list clearfix" ng-repeat="item in musicList.rows" ng-click="play(item.musicUrl)">
+    <div class="txt">
+      <p class="msg">{{item.musicName}}</p>
+      <p class="msg colororange">{{item.authorName}}</p>
+    </div>
+    <img ng-src="../{{item.authorUrl}}" alt="" style="width:40px;max-height: 50px;" class="pic">
+  </li>
+</ul>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 700px;
+			margin: 100px auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" ng-app="app">
+		<ul>
+			<a href="#/categoryManager" class="btn btn-danger glyphicon glyphicon-apple">分类管理</a>
+			<a href="#/musicManager" class="btn btn-success glyphicon glyphicon-record">音乐管理</a>
+		</ul>
+		<div ng-view>
+			
+
+		</div>
+
+	</div>
+</body>
+</html>
+<script src="libs/jquery/jquery.min.js"></script>
+<!-- 文件上传插件 -->
+<script src="libs/jquery-fileupload/jquery.ui.widget.js"></script>
+<script src="libs/jquery-fileupload/jquery.iframe-transport.js"></script>
+<script src="libs/jquery-fileupload/jquery.fileupload.js"></script>
+<!-- bootstrap -->
+<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+<!-- angular和路由器插件 -->
+<script src="libs/angular/angular.min.js"></script>
+<script src="libs/angular/angular-route.js"></script>
+<!-- 首页渲染的js(也是公共部分的就是) -->
+<script src="js/index.js"></script>
+<!-- 分类模块js -->
+<script src="js/category.js"></script>
+<!-- 音乐模块js -->
+<script src="js/music.js"></script>
